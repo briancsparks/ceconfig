@@ -10,8 +10,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
-  "directories": {
-    "lib": "lib"
-  }
+  "license": "MIT"
 }
