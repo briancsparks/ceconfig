@@ -1,0 +1,17 @@
+{
+  "name": "ceconfig",
+  "version": "1.0.0",
+  "description": "Comprehensive Easy Configuration",
+  "main": "index.js",
+  "bin": {
+    "ceconfig": "./bin/ceconfig.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  }
+}
