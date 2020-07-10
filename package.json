@@ -1,14 +1,17 @@
 {
   "name": "ceconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Comprehensive Easy Configuration",
   "main": "index.js",
   "bin": {
     "ceconfig": "./bin/ceconfig.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.10.1"
+  }
 }

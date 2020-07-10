@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+#script_dir="$( cd "$(dirname "$( readlink -f "${BASH_SOURCE[0]}" )" )" && pwd )"    # Linux
+script_dir="$( cd "$(dirname                 "${BASH_SOURCE[0]}"    )" && pwd )"    # Mac
+
+errcho() { echo "$@" 1>&2; }
+die() { errcho "$@"; exit 1; }
+
+node "${script_dir}/" $@
+
