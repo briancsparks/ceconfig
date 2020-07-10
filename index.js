@@ -45,6 +45,11 @@ module.exports.lib = function(names_) {
       case 'safeJSONStringify':
         result[name] = require('./lib/safe')[name];
         break;
+
+      case 'extend':
+        result[name] = require('./lib/extend')[name];
+        break;
+
     }
   }
 
