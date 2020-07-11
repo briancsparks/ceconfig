@@ -1,5 +1,5 @@
 
-const { splitify } = require('./lib/utils');
+const { splitify }            = require('./lib/utils');
 
 module.exports.mkCONFIG = require('./lib/config');
 
@@ -13,6 +13,25 @@ if (require.main === module) {
   require('./lib/run-function').run();
 }
 
+// ------------------------------------------------------------------------------------------------------------------------
+module.exports.all = function() {
+  let   lib                     = require('./lib/extend');
+  const { extend }              = lib;
+
+  lib = extend(lib,
+    require('./lib/argv'),
+    require('./lib/isnt'),
+    require('./lib/safe'),
+    require('./lib/smart'),
+    require('./lib/underscoreish'),
+    require('./lib/utils')
+  );
+
+  return lib;
+};
+
+
+// ------------------------------------------------------------------------------------------------------------------------
 module.exports.lib = function(names_) {
   const names = splitify(names_);
   let   i, len = names.length;
