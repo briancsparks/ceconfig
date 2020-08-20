@@ -51,14 +51,25 @@ module.exports.lib = function(names_) {
       case 'isnt':
       case 'extract':
       case 'extracts':
-      case 'smartValue': result[name] = require('./lib/smart')[name];   break;
+      case 'smartValue':
+        result[name] = require('./lib/smart')[name];
+        break;
 
-      case 'mkARGV': result[name] = require('./lib/argv');   break;
+      case 'mkARGV':
+        result[name] = require('./lib/argv');
+        break;
 
       case 'arrayify':
       case 'cleanKey':
       case 'keyMirror':
-      case 'splitify': result[name] = require('./lib/utils')[name];   break;
+      case 'splitify':
+      case 'isScalar':
+      case 'include':
+      case 'safeStatSync':
+      case 'getProjectRoot':
+      case 'pad':
+        result[name] = require('./lib/utils')[name];
+        break;
 
       case 'safeJSONParse':
       case 'safeJSONStringify':
